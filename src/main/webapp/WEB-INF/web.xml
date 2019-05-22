@@ -1,0 +1,78 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  
+  
+  <filter>
+  	<filter-name>MyFilter</filter-name>
+  	<display-name>MyFilter</display-name>
+  	<description></description>
+  	<filter-class>ua.filter.MyFilter</filter-class>
+  	<init-param>
+  		<param-name>param1</param-name>
+  		<param-value>1</param-value>
+  	</init-param>
+  </filter>
+  
+  
+  <filter-mapping>
+  	<filter-name>MyFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  
+  <servlet>
+  	<servlet-name>DishServlet</servlet-name>
+  	<display-name>DishServlet</display-name>
+  	<description></description>
+  	<servlet-class>ua.servlets.DishServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>NoFoundServlet</servlet-name>
+  	<display-name>NoFoundServlet</display-name>
+  	<description></description>
+  	<servlet-class>ua.servlets.NoFoundServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>CartServlet</servlet-name>
+  	<display-name>CartServlet</display-name>
+  	<description></description>
+  	<servlet-class>ua.servlets.CartServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>CheckServlet</servlet-name>
+  	<display-name>CheckServlet</display-name>
+  	<description></description>
+  	<servlet-class>ua.servlets.CheckServlet</servlet-class>
+  </servlet>
+  
+  
+  
+  <servlet-mapping>
+  	<servlet-name>DishServlet</servlet-name>
+  	<url-pattern>/DishServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>NoFoundServlet</servlet-name>
+  	<url-pattern>/NoFoundServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CartServlet</servlet-name>
+  	<url-pattern>/CartServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CheckServlet</servlet-name>
+  	<url-pattern>/CheckServlet</url-pattern>
+  </servlet-mapping>
+  <error-page>
+  	<error-code>
+  		404
+  	</error-code>
+  	<location>
+  		/404.jsp
+  	</location>
+  </error-page>
+</web-app>
